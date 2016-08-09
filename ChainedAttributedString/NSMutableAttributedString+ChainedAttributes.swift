@@ -105,6 +105,19 @@ public extension NSMutableAttributedString {
         return self
     }
 
+    func baseline(value: CGFloat, forText text:String? = nil) -> NSMutableAttributedString {
+        
+        var attributeRange:NSRange? = nil
+        if let textForAttribute = text {
+            
+            attributeRange = self.getRangeOfStringInSelf(textForAttribute)
+        }
+        
+        self.applyAttribute(NSBaselineOffsetAttributeName, withValue: value, forRange: attributeRange)
+        
+        return self
+    }
+    
     /**
      This function adds underline attribute to attributed string.
      
