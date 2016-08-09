@@ -105,7 +105,15 @@ public extension NSMutableAttributedString {
         return self
     }
 
-    func baseline(value: CGFloat, forText text:String? = nil) -> NSMutableAttributedString {
+    /**
+     <#Description#>
+     
+     - parameter value: <#value description#>
+     - parameter text:  <#text description#>
+     
+     - returns: <#return value description#>
+     */
+    func baselineOffset(value: CGFloat, forText text:String? = nil) -> NSMutableAttributedString {
         
         var attributeRange:NSRange? = nil
         if let textForAttribute = text {
